@@ -39,7 +39,7 @@ public class NioApplicationTests {
     }
 
     @Test
-    public void test4() throws Exception{
+    public void test3() throws Exception{
         FileInputStream fis=new FileInputStream("C:\\Users\\zdx\\Desktop\\oracle.mov");
         FileOutputStream fos=new FileOutputStream("d:\\oracle.mov");
         FileChannel sourceCh = fis.getChannel();
