@@ -57,7 +57,8 @@ public class NettyRPCProxy {
                     future.channel().closeFuture().sync();
                 } finally {
                     group.shutdownGracefully();
-                } return resultHandler.getResponse();
+                }
+                return resultHandler.getResponse();
             }
         });
     }
