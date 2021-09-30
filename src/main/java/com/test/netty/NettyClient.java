@@ -29,5 +29,6 @@ public class NettyClient {
         ChannelFuture cf = b.connect("127.0.0.1", 9999).sync();
         //8.等待连接关闭(非阻塞)
         cf.channel().closeFuture().sync();
+        group.shutdownGracefully();
     }
 }

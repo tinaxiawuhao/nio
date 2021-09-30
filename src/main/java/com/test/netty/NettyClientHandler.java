@@ -11,6 +11,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override //通道就绪事件
     public void channelActive(ChannelHandlerContext ctx) {
+        System.out.println("客户端线程:" + Thread.currentThread().getName());
         System.out.println("Client: " + ctx);
         ctx.writeAndFlush(Unpooled.copiedBuffer("老板,还钱吧", CharsetUtil.UTF_8));
     }
